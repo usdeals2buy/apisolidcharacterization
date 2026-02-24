@@ -1117,24 +1117,32 @@ def fig_hsp_triangle(api_params: dict, solvent_results: pd.DataFrame) -> bytes:
                   "Partial": "#E65100", "Poor": "#F57F17", "Insoluble": "#B71C1C"}
     sol_markers = {"Excellent": "o", "Good": "o", "Partial": "s", "Poor": "s", "Insoluble": "X"}
 
+    # Column name mapping: DataFrame uses "δp"/"δh", api_params uses "dp"/"dh"
+    col_dp = "δp" if "δp" in solvent_results.columns else "dp"
+    col_dh = "δh" if "δh" in solvent_results.columns else "dh"
+
     for _, row in solvent_results.iterrows():
         cls = row["Solubility Class"]
-        ax.scatter(row["dp"], row["dh"],
+        ax.scatter(row[col_dp], row[col_dh],
                    c=sol_colors.get(cls, "#999"),
                    marker=sol_markers.get(cls, "o"),
                    s=110, alpha=0.85, edgecolors="white", linewidth=0.7, zorder=4)
         ax.annotate(row["Abbreviation"],
-                    xy=(row["dp"], row["dh"]),
+                    xy=(row[col_dp], row[col_dh]),
                     xytext=(3, 4), textcoords="offset points",
                     fontsize=7.5, color="#333", fontweight="bold")
 
-    # API star
-    ax.scatter(api_params["dp"], api_params["dh"],
+    # API star — api_params always uses "dp"/"dh" keys (with fallback for δ variants)
+    api_dd = api_params.get("dd", api_params.get("\u03b4d", 0))
+    api_dp = api_params.get("dp", api_params.get("δp", 0))
+    api_dh = api_params.get("dh", api_params.get("δh", 0))
+
+    ax.scatter(api_dp, api_dh,
                c="#FFD700", s=420, marker="*", zorder=10,
                edgecolors="#333", linewidth=1.2, label=f"API: {api_params.get('name','API')}")
 
     # Draw interaction radius circle (R0 = 5 MPa^0.5 threshold)
-    circle = plt.Circle((api_params["dp"], api_params["dh"]), 5.0,
+    circle = plt.Circle((api_dp, api_dh), 5.0,
                          color="#FFD700", fill=False, linestyle="--", linewidth=1.5,
                          alpha=0.6, label="R₀ = 5 MPa^0.5")
     ax.add_patch(circle)
@@ -1153,8 +1161,8 @@ def fig_hsp_triangle(api_params: dict, solvent_results: pd.DataFrame) -> bytes:
 
     ax.set_xlabel("δp — Polar Component (MPa^0.5)", fontweight="bold", fontsize=10)
     ax.set_ylabel("δh — H-Bond Component (MPa^0.5)", fontweight="bold", fontsize=10)
-    ax.set_title(f"HSP Landscape (δp vs δh)\nAPI: δd={api_params['dd']}, δp={api_params['dp']}, "
-                 f"δh={api_params['dh']} MPa^0.5", fontsize=11, fontweight="bold", pad=12)
+    ax.set_title(f"HSP Landscape (δp vs δh)\nAPI: δd={api_dd}, δp={api_dp}, "
+                 f"δh={api_dh} MPa^0.5", fontsize=11, fontweight="bold", pad=12)
 
     buf = io.BytesIO()
     fig.savefig(buf, format="png", dpi=150, bbox_inches="tight",
