@@ -485,14 +485,14 @@ GROUP_CONTRIBUTIONS = {
     "Phenyl/Benzene ring": {
         "label": "Phenyl / Benzene ring (C₆H₅)", "category": "Aromatic",
         "Fd": 1503, "Fp": 310, "Uh": 0, "V": 71.4, "logP_f": 1.56,
-        "MW": 77.1, "hbd": 0, "hba": 0, "rotbonds": 1,
+        "MW": 76.09, "hbd": 0, "hba": 0, "rotbonds": 1,
         "tpsa": 0, "mp_contrib": 31.5,
         "note": "Monosubstituted phenyl/benzene. Drives δd up significantly.",
     },
     "Naphthalene ring": {
         "label": "Naphthalene system (C₁₀H₇)", "category": "Aromatic",
         "Fd": 2820, "Fp": 450, "Uh": 0, "V": 123.8, "logP_f": 2.84,
-        "MW": 127.2, "hbd": 0, "hba": 0, "rotbonds": 1,
+        "MW": 126.16, "hbd": 0, "hba": 0, "rotbonds": 1,
         "tpsa": 0, "mp_contrib": 45.0,
         "note": "Bicyclic aromatic system.",
     },
@@ -508,8 +508,8 @@ GROUP_CONTRIBUTIONS = {
     "Imidazole ring": {
         "label": "Imidazole ring", "category": "Aromatic Heterocycle",
         "Fd": 820, "Fp": 700, "Uh": 8000, "V": 55.0, "logP_f": -0.08,
-        "MW": 68.1, "hbd": 1, "hba": 1, "rotbonds": 1,
-        "tpsa": 28.7, "mp_contrib": 35.0,
+        "MW": 67.07, "hbd": 1, "hba": 1, "rotbonds": 1,
+        "tpsa": 41.82, "mp_contrib": 35.0,
         "pka_estimate": 6.5, "pka_type": "Base",
         "note": "Amphiprotic — both HBD and HBA. Base pKa ~6.5. "
                 "Found in histidine, many drug candidates (e.g. omeprazole).",
@@ -517,8 +517,8 @@ GROUP_CONTRIBUTIONS = {
     "Morpholine ring": {
         "label": "Morpholine ring", "category": "Saturated Heterocycle",
         "Fd": 950, "Fp": 550, "Uh": 3000, "V": 77.5, "logP_f": -0.80,
-        "MW": 87.1, "hbd": 0, "hba": 2, "rotbonds": 0,
-        "tpsa": 12.5, "mp_contrib": 15.0,
+        "MW": 86.09, "hbd": 0, "hba": 2, "rotbonds": 0,
+        "tpsa": 21.26, "mp_contrib": 15.0,
         "pka_estimate": 8.3, "pka_type": "Base",
         "note": "Moderate base (pKa ~8.3). Low logP contribution. "
                 "Commonly used to improve aqueous solubility in med-chem.",
@@ -526,8 +526,8 @@ GROUP_CONTRIBUTIONS = {
     "Piperidine ring": {
         "label": "Piperidine ring", "category": "Saturated Heterocycle",
         "Fd": 1100, "Fp": 280, "Uh": 3100, "V": 83.0, "logP_f": 0.14,
-        "MW": 85.2, "hbd": 1, "hba": 1, "rotbonds": 0,
-        "tpsa": 12.0, "mp_contrib": 15.0,
+        "MW": 84.12, "hbd": 1, "hba": 1, "rotbonds": 0,
+        "tpsa": 16.00, "mp_contrib": 15.0,
         "pka_estimate": 10.5, "pka_type": "Base",
         "note": "Strong aliphatic base (pKa ~10.5). Common in APIs (e.g. haloperidol). "
                 "High NH donor contribution to δh.",
@@ -535,8 +535,8 @@ GROUP_CONTRIBUTIONS = {
     "Piperazine ring": {
         "label": "Piperazine ring", "category": "Saturated Heterocycle",
         "Fd": 1050, "Fp": 400, "Uh": 4200, "V": 86.0, "logP_f": -1.03,
-        "MW": 86.1, "hbd": 2, "hba": 2, "rotbonds": 0,
-        "tpsa": 15.6, "mp_contrib": 20.0,
+        "MW": 85.11, "hbd": 2, "hba": 2, "rotbonds": 0,
+        "tpsa": 24.06, "mp_contrib": 20.0,
         "pka_estimate": 9.8, "pka_type": "Base",
         "note": "Dibasic (pKa1 ~9.8, pKa2 ~5.3). Very water-soluble moiety. "
                 "Common in CNS drugs. Both N atoms ionisable.",
@@ -544,7 +544,7 @@ GROUP_CONTRIBUTIONS = {
     "Pyrrolidine ring": {
         "label": "Pyrrolidine ring", "category": "Saturated Heterocycle",
         "Fd": 950, "Fp": 280, "Uh": 3100, "V": 71.0, "logP_f": 0.25,
-        "MW": 71.1, "hbd": 1, "hba": 1, "rotbonds": 0,
+        "MW": 70.09, "hbd": 1, "hba": 1, "rotbonds": 0,
         "tpsa": 16.0, "mp_contrib": 12.0,
         "pka_estimate": 11.3, "pka_type": "Base",
         "note": "Strong secondary amine (pKa ~11.3). Cyclic structure reduces rotatable bonds.",
@@ -552,15 +552,15 @@ GROUP_CONTRIBUTIONS = {
     "Thiophene ring": {
         "label": "Thiophene ring", "category": "Aromatic Heterocycle",
         "Fd": 1100, "Fp": 250, "Uh": 1500, "V": 67.0, "logP_f": 1.81,
-        "MW": 84.1, "hbd": 0, "hba": 0, "rotbonds": 1,
-        "tpsa": 0, "mp_contrib": 28.0,
+        "MW": 83.13, "hbd": 0, "hba": 0, "rotbonds": 1,
+        "tpsa": 28.24, "mp_contrib": 28.0,
         "note": "Aromatic sulfur ring. Bioisostere for phenyl. "
                 "Contributes to δd and S-atom polarity.",
     },
     "Indole ring": {
         "label": "Indole ring system", "category": "Aromatic Heterocycle",
         "Fd": 1950, "Fp": 500, "Uh": 9000, "V": 110.0, "logP_f": 2.14,
-        "MW": 117.1, "hbd": 1, "hba": 1, "rotbonds": 1,
+        "MW": 116.14, "hbd": 1, "hba": 0, "rotbonds": 1,
         "tpsa": 13.1, "mp_contrib": 42.0,
         "pka_estimate": 16.0, "pka_type": "Very Weak Acid",
         "note": "NH is weak H-bond donor (not pharmacologically relevant pKa).",
@@ -650,7 +650,7 @@ GROUP_CONTRIBUTIONS = {
     "-NH₂ (aromatic amine)": {
         "label": "Primary aromatic amine (-ArNH₂)", "category": "Nitrogen",
         "Fd": 180, "Fp": 480, "Uh": 5000, "V": 14.0, "logP_f": -0.64,
-        "MW": 16.0, "hbd": 2, "hba": 1, "rotbonds": 0,
+        "MW": 16.0, "hbd": 2, "hba": 0, "rotbonds": 0,
         "tpsa": 26.0, "mp_contrib": 35.0,
         "pka_estimate": 4.5, "pka_type": "Base",
         "note": "Weak base (pKa ~3-5). Less basic than aliphatic amines. "
@@ -693,9 +693,9 @@ GROUP_CONTRIBUTIONS = {
     "-CONH- (secondary amide)": {
         "label": "Secondary amide (-CONH-)", "category": "Nitrogen",
         "Fd": 280, "Fp": 480, "Uh": 8000, "V": 14.0, "logP_f": -1.30,
-        "MW": 43.0, "hbd": 1, "hba": 2, "rotbonds": 0,
+        "MW": 43.0, "hbd": 1, "hba": 1, "rotbonds": 0,
         "tpsa": 29.1, "mp_contrib": 40.0,
-        "note": "1 HBD (NH), 2 HBA (C=O and N). "
+        "note": "1 HBD (NH), 1 HBA (C=O only — Lipinski counts O not N). "
                 "Key amide synthon for cocrystal formation. "
                 "Found in most peptide bonds and many drug backbones.",
     },
@@ -720,7 +720,7 @@ GROUP_CONTRIBUTIONS = {
     "-Cl": {
         "label": "Chlorine (-Cl)", "category": "Halogen",
         "Fd": 419, "Fp": 490, "Uh": 400, "V": 24.0, "logP_f": 0.60,
-        "MW": 35.5, "hbd": 0, "hba": 1, "rotbonds": 0,
+        "MW": 35.5, "hbd": 0, "hba": 0, "rotbonds": 0,
         "tpsa": 0, "mp_contrib": 32.0,
         "note": "Significant logP increase (+0.60). Metabolic concern — "
                 "CYP-mediated dechlorination possible.",
@@ -745,15 +745,16 @@ GROUP_CONTRIBUTIONS = {
     "-S- (thioether)": {
         "label": "Thioether (-S-)", "category": "Sulfur",
         "Fd": 428, "Fp": 160, "Uh": 1000, "V": 16.0, "logP_f": 0.15,
-        "MW": 32.1, "hbd": 0, "hba": 1, "rotbonds": 1,
+        "MW": 32.1, "hbd": 0, "hba": 0, "rotbonds": 1,
         "tpsa": 25.3, "mp_contrib": 14.0,
-        "note": "Moderate HBA. Oxidation metabolite (sulfoxide, sulfone) common. "
+        "note": "Not HBA by Lipinski definition (S lone pairs too diffuse). "
+                "Oxidation metabolite (sulfoxide, sulfone) common. "
                 "Contributes to δd significantly.",
     },
     "-SH (thiol)": {
         "label": "Thiol (-SH)", "category": "Sulfur",
         "Fd": 290, "Fp": 200, "Uh": 4000, "V": 21.0, "logP_f": -0.08,
-        "MW": 33.1, "hbd": 1, "hba": 0, "rotbonds": 0,
+        "MW": 33.1, "hbd": 0, "hba": 0, "rotbonds": 0,
         "tpsa": 38.8, "mp_contrib": 25.0,
         "pka_estimate": 10.5, "pka_type": "Acid",
         "note": "pKa ~10-11. Oxidation-prone — disulfide formation. "
@@ -763,7 +764,7 @@ GROUP_CONTRIBUTIONS = {
     "-PO(OH)₂ (phosphonic acid)": {
         "label": "Phosphonic acid (-PO(OH)₂)", "category": "Phosphorus",
         "Fd": 520, "Fp": 1400, "Uh": 18000, "V": 45.0, "logP_f": -2.82,
-        "MW": 79.0, "hbd": 2, "hba": 4, "rotbonds": 0,
+        "MW": 97.00, "hbd": 2, "hba": 4, "rotbonds": 0,
         "tpsa": 94.8, "mp_contrib": 80.0,
         "pka_estimate": 2.1, "pka_type": "Acid",
         "note": "Diprotic acid (pKa1 ~2.1, pKa2 ~7.0). Very hydrophilic. "
